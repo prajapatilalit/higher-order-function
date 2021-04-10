@@ -1,13 +1,4 @@
-function reject(array, fn) {
-  let arr = [];
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] % 2 === 0) {
-      arr.push(array[i]);
-    }
-  }
-  return fn(arr);
+function sendMessage(message, fn){
+    return fn(message);
 }
-
-reject([1, 2, 3, 4], function (val) {
-  console.log(val);
-});
+sendMessage("Hello world!!", console.log);
